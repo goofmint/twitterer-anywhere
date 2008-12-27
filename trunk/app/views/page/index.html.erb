@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+  <head> 
+    <title>twitterer anywhere</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta http-equiv="pragma" content="no-cache" /> 
+    <meta http-equiv="imagetoolbar" content="no" /> 
+    <meta name="robots" content="all" /> 
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" /> 
+    <%= stylesheet_link_tag "style" %>
+    <%= javascript_include_tag "twitterer_anywhere.ex.js" %>
+  </head> 
+  <body>
+    <div id="container">
+      <div id="header"><h1>twitterer anywhere</h1></div>
+      <div id="sub_header">twitter messages on your blog!</div>
+      <div id="main_content_top"></div>
+      <div id="main_content">
+
+        <div class="content">
+          <p>twitterer anywhere view your web site comments on twitter.</p>
+          <h2>Example</h2>
+          <p>URL is <%= link_to "http://lifehacker.com/5118454/firefox-and-chrome-run-gmail-twice-as-fast-as-ie-says-google", "http://lifehacker.com/5118454/firefox-and-chrome-run-gmail-twice-as-fast-as-ie-says-google" %></p>
+          <div id="twitterer_anywhere"></div>
+          <h2>Japanese version</h2>
+          <p><%= image_tag "twitterer_jp.png" %></p>
+          <h2>Usage</h2>
+          <h3>Step 1</h3>
+          <p>Write this script tag on your web site (probability inside head tag is good)</p>
+          <blockquote><%=h '<script src="http://localhost:3000/javascripts/twitterer_anywhere.js" type="text/javascript"></script>' %></blockquote>
+          <p>or</p>
+          <p>Download <%= link_to "this javascript file", "http://localhost:3000/javascripts/twitterer_anywhere.js" %> and upload your web site. Japanese version is <%= link_to "here", "http://localhost:3000/javascripts/twitterer_anywhere.ja.js" %>.</p>
+          <h3>Step 2</h3>
+          <p>Write your web site below tag. Comments display in this tag.</p>
+          <blockquote><%=h '<div id="twitterer_anywhere"></div>' %></blockquote>
+          <h3>That's all!</h3>
+          <h2>Special thanks</h2>
+          <dl>
+            <dt><%= link_to "Masuidrive", "http://blog.masuidrive.jp/" %></dt>
+            <dd>twitterer anywhere is inspired his javascript named <%= link_to "hatena bookmark anywhere", "http://blog.masuidrive.jp/index.php/2008/04/17/released-hatena-bookmark-anywhere/" %>.</dd>
+            <dt><%= link_to "twitter検索", "http://pcod.no-ip.org/yats/" %>(twitter search)</dt>
+            <dd>twitter検索 is twitter search engine made for Japanese. This service get results JSON format.</dd>
+            <dt><%= link_to "ついったーランキング", "http://twitter.g.hatena.ne.jp/ikko615/20080107/1199703400" %>(twitter ranking)</dt>
+            <dd>ついったーランキング offter twitter profile icon Web API.</dd>
+            <dt><%= link_to "Twitter Search", "http://search.twitter.com/" %>(twitter search for All languages)</dt>
+            <dd>twitter search use for no Japanese.</dd>
+          </dl>
+          <h2>Feature</h2>
+          <dl>
+            <dt>Search URL and tinyurl's URL</dt>
+          </dl>
+          <h2>Known problems</h2>
+          <dl>
+            <dt>This script is valid for permanent URL</dt>
+            <dt>Currently date is Japanese format only.</dt>
+            <dt>Don't use twitterer_anywhere_collapse option.</dt>
+          </dl>
+          <h2>History</h2>
+          <dl>
+            <dt>12/26/2008</dt>
+            <dd>Alpha release</dd>
+          </dl>
+        </div>
+        <div class="menu">
+          <div class="menu_title">Main menu</div>
+          <ul>
+          <li><a href="#" class="menu_link">About me</a></li>
+          <li><a href="#" class="menu_link">Contact me</a></li>
+        </ul>
+      </div>
+      
+        <div id="clear"></div>
+        
+      </div>
+      
+      <div id="main_content_bottom">
+      </div>
+      <div id="footer">
+        <strong>Copyright &copy; 2008</strong> | <%= link_to "MOONGIFT", "http://www.moongift.jp/" %> | <b>Design by</b> <a href="http://www.pikanai.com">Pikanai.com</a>
+      </div>
+    </div>
+  </body>
+</html>
