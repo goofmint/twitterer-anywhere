@@ -92,7 +92,7 @@ function __twitterer_anywhere_loade() {
 	    var script = document.createElement("script");
 	    script.setAttribute("type","text/javascript");
 	    if((typeof twitterer_anywhere_url)=="undefined") twitterer_anywhere_url = location.href.replace(/#.*/,"");
-	    script.setAttribute("src","http://localhost:3000/m/"+twitterer_anywhere_url+"?callback=__twitterer_anywhere_receiver&lang=ja");
+	    script.setAttribute("src","http://twitterer.moongift.jp/m/"+twitterer_anywhere_url+"?callback=__twitterer_anywhere_receiver&lang=ja");
 	    document.body.appendChild(script);
 	}
     } catch(e) { }
